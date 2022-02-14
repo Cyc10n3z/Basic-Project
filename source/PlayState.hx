@@ -1,7 +1,6 @@
 package;
 
 import flixel.FlxState;
-import haxe.display.Protocol.HaxeResponseErrorData;
 
 class PlayState extends FlxState
 {
