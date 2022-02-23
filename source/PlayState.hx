@@ -7,10 +7,24 @@ class PlayState extends FlxState
 {
 	override public function create()
 	{
+		// Part 1: Added a new FlxText object and modified it's default appearance
+		var text = new FlxText(300, 200, "Hello World!");
+		text.setFormat("Times New Roman", 100, 0xFFFF0000, OUTLINE, 0xFF00FFFF);
+		text.screenCenter();
+		add(text);
+
+		// Part 2: Added multiple ScreensaverHero objects
+		var Hero1 = new ScreensaverHero();
+		Hero1.screenCenter();
+		add(Hero1);
+		var Hero2 = new ScreensaverHero();
+		Hero2.screenCenter();
+		add(Hero2);
+		var Hero3 = new ScreensaverHero();
+		Hero3.screenCenter();
+		add(Hero3);
+
 		super.create();
-		add(new Hero(300, 300));
-		// Added a new FlxText object and modified it's default appearance
-		var text = add(new FlxText(300, 200, "Hello World!").setFormat("arial", 14, 0xFFFF0000, "center", OUTLINE, 0xFF00FFFF));
 	}
 
 	override public function update(elapsed:Float)
