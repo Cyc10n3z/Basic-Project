@@ -3,10 +3,12 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 
+using flixel.util.FlxSpriteUtil;
+
 // Part 2: Added a Screensaver Hero Class
 class ScreensaverHero extends FlxSprite
 {
-	// Implemented Constructor
+	// Implement Constructor
 	public function new()
 	{
 		// Invoke parent class constructor
@@ -20,8 +22,7 @@ class ScreensaverHero extends FlxSprite
 		var x_m = FlxG.random.int(5, 50);
 		var y_m = FlxG.random.int(5, 50);
 		// Make the graphic move automatically each frame
-		velocity.set(x, y);
-		// Add keyboard and mouse input?
+		velocity.set(x_m, y_m);
 	}
 
 	// Override inherited update() function/method
