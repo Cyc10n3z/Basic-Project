@@ -13,8 +13,6 @@ class Wall extends FlxSprite
 	{
 		// Invoke parent class constructor
 		super(x, y);
-		this.x = x;
-		this.y = y;
 
 		// Make a Wall sprite
 		var wall = new FlxSprite();

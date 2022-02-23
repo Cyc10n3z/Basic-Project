@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.util.FlxColor;
 
 using flixel.util.FlxSpriteUtil;
 
@@ -13,10 +14,8 @@ class ScreensaverHero extends FlxSprite
 	{
 		// Invoke parent class constructor
 		super(x, y);
-		this.x = x;
-		this.y = y;
-		// Make a simple rectangle sprite
-		var myRectangle = new FlxSprite(x, y);
+
+		// Make a simple graphic on the rectangle sprite
 		makeGraphic(30, 10, true);
 		// Randomize the direction for the sprite to move each frame
 		var x_m = FlxG.random.int(5, 50);
@@ -28,8 +27,15 @@ class ScreensaverHero extends FlxSprite
 	// Override inherited update() function/method
 	override public function update(elapsed:Float)
 	{
-		// Set the FlxSprite color property to CYAN and make it move each frame
-		color = 0xFF00FFFF; // FlxColor.CYAN
+		// Set the ScreensaverHero sprite color property to change based on screen position
+		if (y <= 300)
+		{
+			color = FlxColor.fromRGB(0, 255, 255, 0); // Cyan
+		}
+		else
+		{
+			color = FlxColor.fromRGB(255, 165, 0, 0); // Orange
+		}
 
 		super.update(elapsed);
 	}

@@ -9,18 +9,15 @@ using flixel.util.FlxSpriteUtil;
 class ControllableHero extends FlxSprite
 {
 	// Movement variable
-	var speed = 10; // Couldn't figure out a better way to handle this?
+	static inline var speed:Int = 10;
 
 	// Implement Constructor
 	public function new()
 	{
 		// Invoke parent class constructor
 		super(x, y);
-		this.x = x;
-		this.y = y;
 
-		// Make a simple rectangle sprite
-		var myRectangle = new FlxSprite(x, y);
+		// Make a simple graphic on the rectangle sprite
 		makeGraphic(30, 10, 0xFFFFA500, true); // FlxColor Orange
 	}
 
