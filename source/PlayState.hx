@@ -1,5 +1,6 @@
 package;
 
+import flixel.FlxG;
 import flixel.FlxState;
 import flixel.text.FlxText;
 
@@ -14,24 +15,37 @@ class PlayState extends FlxState
 		add(text);
 
 		// Part 2: Added multiple ScreensaverHero sprites
-		var Hero1 = new ScreensaverHero();
-		Hero1.screenCenter();
-		add(Hero1);
-		var Hero2 = new ScreensaverHero();
-		Hero2.screenCenter();
-		add(Hero2);
-		var Hero3 = new ScreensaverHero();
-		Hero3.screenCenter();
-		add(Hero3);
+		var hero1 = new ScreensaverHero();
+		hero1.screenCenter();
+		add(hero1);
+		var hero2 = new ScreensaverHero();
+		hero2.screenCenter();
+		add(hero2);
+		var hero3 = new ScreensaverHero();
+		hero3.screenCenter();
+		add(hero3);
 		// Part 3: Added a ControllableHero sprite
 		var cHero = new ControllableHero();
 		add(cHero);
+
+		// Part 3 - Bonus 1: Added Wall sprites
+		// var wallOne = new Wall();
+		// add(wallOne);
+		// var wallTwo = new Wall();
+		// add(wallTwo);
+		// var wallThree = new Wall();
+		// add(wallThree);
+		// var wallFour = new Wall();
+		// add(wallFour);
 
 		super.create();
 	}
 
 	override public function update(elapsed:Float)
 	{
+		// Collision detection for Wall sprites
+		// FlxG.collide();
+
 		super.update(elapsed);
 	}
 }

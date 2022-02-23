@@ -9,7 +9,7 @@ using flixel.util.FlxSpriteUtil;
 class ControllableHero extends FlxSprite
 {
 	// Movement variable
-	var speed = 10;
+	var speed = 10; // Couldn't figure out a better way to handle this?
 
 	// Implement Constructor
 	public function new()
@@ -27,7 +27,13 @@ class ControllableHero extends FlxSprite
 	// Override inherited update() function/method
 	override public function update(elapsed:Float)
 	{
-		// Keyboard movement
+		keyMovement();
+		super.update(elapsed);
+	}
+
+	// Keyboard Movement function/method
+	public function keyMovement()
+	{
 		if (FlxG.keys.anyPressed([UP, W]))
 		{
 			this.y -= Math.round(speed);
@@ -44,7 +50,5 @@ class ControllableHero extends FlxSprite
 		{
 			this.x += Math.round(speed);
 		}
-
-		super.update(elapsed);
 	}
 }
