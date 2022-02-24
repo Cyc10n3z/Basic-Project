@@ -28,7 +28,7 @@ class ScreensaverHero extends FlxSprite
 	override public function update(elapsed:Float)
 	{
 		// Set the ScreensaverHero sprite color property to change based on screen position
-		if (y <= 300)
+		if (y <= 320)
 		{
 			color = FlxColor.fromRGB(0, 255, 255, 0); // Cyan
 		}

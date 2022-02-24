@@ -33,19 +33,19 @@ class ControllableHero extends FlxSprite
 	{
 		if (FlxG.keys.anyPressed([UP, W]))
 		{
-			this.y -= Math.round(speed);
+			velocity.y -= speed;
 		}
 		if (FlxG.keys.anyPressed([DOWN, S]))
 		{
-			this.y += Math.round(speed);
+			velocity.y += speed;
 		}
 		if (FlxG.keys.anyPressed([LEFT, A]))
 		{
-			this.x -= Math.round(speed);
+			velocity.x -= speed;
 		}
 		if (FlxG.keys.anyPressed([RIGHT, D]))
 		{
-			this.x += Math.round(speed);
+			velocity.x += speed;
 		}
 	}
 }
